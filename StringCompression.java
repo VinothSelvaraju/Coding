@@ -1,0 +1,41 @@
+import java.lang.StringBuilder;
+class StringCompression{
+	public static String compress(String input){
+		if(input == null || input.length() == 0 || compressHelper(input).length() >= input.length()){
+			return input;
+		}
+		else{
+			return compressHelper(input);
+		}
+	}
+	public static String compressHelper(String input){
+		char[] charArr = input.toCharArray();
+		char runningChar = charArr[0];
+		int count = 0;
+		StringBuilder stringBuilder = new StringBuilder();
+		for(int i=0;i<charArr.length;i++){
+			if(runningChar == charArr[i]){
+				count++;
+			}
+			else{
+				stringBuilder.append(runningChar);
+				stringBuilder.append(count);
+				count = 1;
+				runningChar = charArr[i];
+			}
+		}
+		stringBuilder.append(runningChar);
+		stringBuilder.append(count);
+		System.out.println("compressHelper : " + stringBuilder.toString());
+		return stringBuilder.toString();
+	}
+	public static void main(String[] args){
+		String out = compress("11hbjkb1112jjjkujjjiooooo");
+		if(out == null){
+			System.out.println("Compressed output is null");
+		}
+		else{
+			System.out.println("OUTPUT: "+out);
+		}
+	}
+}
