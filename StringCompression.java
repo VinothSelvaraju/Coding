@@ -1,5 +1,3 @@
-//Code for compressing String
-//Time - O(n); Space - O(n)
 import java.lang.StringBuilder;
 class StringCompression{
 	/*
