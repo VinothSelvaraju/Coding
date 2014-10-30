@@ -1,5 +1,12 @@
+//Code for compressing String
+//Time - O(n); Space - O(n)
 import java.lang.StringBuilder;
 class StringCompression{
+	/*
+	Code for compressing String with the occurances followed by the char. if the compressed string length > input, output the original string
+	Time - O(n)
+	Space - O(n), Building the new string and storing the input as char[]
+	*/
 	public static String compress(String input){
 		if(input == null || input.length() == 0 || compressHelper(input).length() >= input.length()){
 			return input;
