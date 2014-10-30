@@ -53,7 +53,7 @@ class SampleSinglyLinkedList<T>{
 			}
 		}
 	}
-	public void printList(){
+	public void printList(Node<T> head){
 		if(head != null){
 			Node<T> itr = head;
 			System.out.println("Printing SampleLinkedList: ");
