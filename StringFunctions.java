@@ -114,8 +114,8 @@ class StringFunctions{
 		System.out.println("----------------------------------------");
 
 		System.out.println("****String remove char****");
-		System.out.println(removeChar("malayalam",'m'));
-		System.out.println(removeChar("malayalam",'a'));
+		System.out.println(removeChar("mamam",'m'));
+		System.out.println(removeChar("mamam",'a'));
 		System.out.println(removeChar("xxxxxxxx",'x'));
 		System.out.println(removeChar("abc",'d'));
 		System.out.println(removeChar("abba",'\0'));
